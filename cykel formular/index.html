@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="da">
+  <!-- Specifies the document type and language as Danish -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper rendering on mobile devices -->
+    <meta name="description" content="..." />
+    <!-- Provides a brief description for search engines -->
+    <title>Hotel Nyborg</title>
+    <!-- Sets the title of the page -->
+    <link rel="icon" href="media/..." type="image/svg" />
+    <!-- Links to the website icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Links to the Google Fonts stylesheet for custom fonts -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links to the external CSS stylesheet -->
+  </head>
+  <body>
+    <!-- Main container for the booking form -->
+    <div class="form-container">
+      <h2>Cykel booking</h2>
+      <!-- Heading for the form -->
+
+      <!-- Start of the form -->
+      <form id="bikeForm">
+        <h3>Indtast dine data</h3>
+        <!-- Subheading for data input section -->
+
+        <!-- Email input field -->
+        <label for="email">Din e-mail adresse</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Room number input field -->
+        <label for="roomNumber">Indtast værelsesnummer</label>
+        <input type="number" id="roomNumber" name="roomNumber" required />
+
+        <h3>Vælg cykeltype</h3>
+        <!-- Subheading for bike type selection -->
+
+        <!-- Input field for selecting the number of adult bikes -->
+        <div>
+          <label>Til voksne</label>
+          <input
+            type="number"
+            id="adultBikes"
+            name="adultBikes"
+            min="0"
+            max="10"
+            value="0"
+          />
+        </div>
+
+        <!-- Input field for selecting the number of bikes for children up to 7 years -->
+        <div>
+          <label>Til børn (op til 7 år)</label>
+          <input
+            type="number"
+            id="childBikes7"
+            name="childBikes7"
+            min="0"
+            max="10"
+            value="0"
+          />
+        </div>
+
+        <!-- Input field for selecting the number of bikes for children up to 15 years -->
+        <div>
+          <label>Til børn (op til 15 år)</label>
+          <input
+            type="number"
+            id="childBikes15"
+            name="childBikes15"
+            min="0"
+            max="10"
+            value="0"
+          />
+        </div>
+
+        <h3>Vælg en dato</h3>
+        <!-- Subheading for date selection -->
+
+        <!-- Read-only date input field -->
+        <input
+          type="text"
+          id="date"
+          name="date"
+          placeholder="Vælg en dato"
+          readonly
+          aria-label="Date input"
+          required
+        />
+
+        <!-- Container for the interactive calendar -->
+        <div
+          id="calendarContainer"
+          class="calendar-container"
+          role="dialog"
+          aria-hidden="true"
+          aria-label="Calendar"
+        ></div>
+
+        <!-- Privacy policy acceptance checkbox -->
+        <label>
+          <input type="checkbox" id="privacyPolicy" required />
+          Jeg accepterer
+          <a
+            href="https://twoja-strona.pl/polityka-prywatnosci"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Privatlivspolitik</a
+          >
+        </label>
+
+        <!-- Button to check bike availability -->
+        <button type="button" onclick="checkAvailability()">
+          Tjek tilgængelighed
+        </button>
+
+        <!-- Paragraph to display availability messages -->
+        <p id="availabilityMessage"></p>
+
+        <!-- Button to book bikes (initially disabled) -->
+        <button type="button" id="bookButton" disabled>Book cykler</button>
+      </form>
+    </div>
+
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

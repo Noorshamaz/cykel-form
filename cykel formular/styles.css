@@ -1,0 +1,193 @@
+/* Basic page styling to center content and set background */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  display: flex; /* Centers content horizontally */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light gray background */
+  margin: 0; /* Removes default margin */
+}
+
+/* Form container styling */
+.form-container {
+  background-color: #ffffff; /* White background for the form */
+  padding: 40px; /* Space inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  max-width: 450px; /* Maximum width for larger screens */
+  width: 100%; /* Responsive width */
+}
+
+/* Form heading styling */
+h2 {
+  text-align: center; /* Centers the text */
+  font-size: 1.75em; /* Large font size */
+  color: #3C5629; /* Dark green color */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 24px; /* Space below the heading */
+  text-transform: uppercase; /* All uppercase letters */
+}
+
+/* Label styling */
+label {
+  display: block; /* Full width */
+  margin-top: 8px; /* Space above the label */
+  font-size: 1em; /* Standard font size */
+  color: #333; /* Dark gray color */
+}
+
+/* Input field styling */
+input[type="email"], input[type="number"], input[type="text"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Space inside the input */
+  margin-top: 4px; /* Space above the input */
+  margin-bottom: 16px; /* Space below the input */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1em; /* Standard font size */
+}
+
+/* Input focus effect */
+input:focus {
+  outline: none; /* Removes default outline */
+  border-color: #39C289; /* Green border on focus */
+  box-shadow: 0px 0px 5px rgba(57, 194, 137, 0.5); /* Green shadow on focus */
+}
+
+/* Button styling */
+button {
+  width: 60%; /* Button width */
+  padding: 12px; /* Space inside the button */
+  background-color: #39C289; /* Green background */
+  color: #ffffff; /* White text */
+  border: none; /* Removes border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Standard font size */
+  margin-top: 20px; /* Space above the button */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 16px; /* Space below the button */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Centers button content */
+  text-transform: uppercase; /* All uppercase letters */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #2d9b70; /* Darker green on hover */
+}
+
+/* Disabled button styling */
+button:disabled {
+  background-color: #ccc; /* Gray background */
+  color: #8E8E8E; /* Light gray text */
+  cursor: not-allowed; /* Not-allowed cursor */
+}
+
+/* Availability message styling */
+#availabilityMessage {
+  margin-top: 20px; /* Space above the message */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Centers text */
+}
+
+/* Calendar container styling */
+.calendar-container {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioned relative to the parent */
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Space inside the container */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  z-index: 100; /* Ensures it appears above other elements */
+  width: 320px; /* Set width */
+}
+
+/* Calendar header styling */
+.calendar-header {
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between navigation buttons */
+  align-items: center; /* Center alignment */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+/* Calendar header button styling */
+.calendar-header button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  font-size: 1.5em; /* Large font size */
+  cursor: pointer; /* Pointer cursor */
+  color: #39C289; /* Green color */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Calendar header button hover effect */
+.calendar-header button:hover {
+  color: #2d9b70; /* Darker green on hover */
+}
+
+/* Month label styling */
+.calendar-header .month-label {
+  font-size: 1.2em; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark gray color */
+}
+
+/* Calendar table styling */
+.calendar-container table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* No gaps between cells */
+  text-align: center; /* Center text */
+}
+
+/* Table header cell styling */
+.calendar-container th {
+  background-color: #f4f4f4; /* Light gray background */
+  font-weight: bold; /* Bold text */
+  padding: 8px; /* Space inside the cell */
+  color: #555; /* Medium gray text */
+  border-bottom: 1px solid #ddd; /* Light border */
+}
+
+/* Table data cell styling */
+.calendar-container td {
+  padding: 10px; /* Space inside the cell */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+/* Hover and focus effect for calendar cells */
+.calendar-container td:hover,
+.calendar-container td:focus {
+  background-color: #39C289; /* Green background */
+  color: #fff; /* White text */
+  outline: none; /* Removes outline */
+}
+
+/* Disabled cell styling */
+.calendar-container td[aria-disabled="true"] {
+  color: #ccc; /* Light gray text */
+  pointer-events: none; /* No interaction */
+  cursor: not-allowed; /* Not-allowed cursor */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+      width: 90%; /* Reduced width */
+  }
+}
+
+/* Subheading styling */
+h3 {
+  font-size: 1.1em; /* Standard font size */
+  color: #3C5629; /* Dark green color */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 12px; /* Space below the subheading */
+  margin-top: 20px; /* Space above the subheading */
+  text-transform: uppercase; /* All uppercase letters */
+}
